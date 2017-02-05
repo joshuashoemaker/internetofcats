@@ -1,0 +1,22 @@
+#catImg{
+    box-shadow: 12px 7px 15px rgba(0,0,0,0.3);
+    border-bottom-width: 1px;
+    border-bottom-color: darkgrey;
+    border-bottom-style: solid;
+    border-right-width: 1px;
+    border-right-color: darkgrey;
+    border-right-style: solid;
+    transition-duration: 300ms;
+    margin-bottom: 10px;
+}
+
+#catImg:hover{
+    transition-duration: 550ms;
+    box-shadow: 15px 9px 25px rgba(0,0,0,0.35);
+}
+
+#counter{
+    color: lightslategrey;
+    font-size: 20pt;
+    text-decoration: underline;
+}
