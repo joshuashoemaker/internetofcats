@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cat Clicker</title>
+        <title>Internet of Cats</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Optional theme -->
+        <!-- Bootstrap Theme -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="style.css">
 
@@ -17,35 +17,24 @@
                 <h1>IOC <small>(internet of cats)</small></h1>
                 <p> click me for love </p>
 
-                <div class="img-wrapper">
-                    <img id="catImg" src="">
+                <div id="current-cat" class="img-wrapper">
+                    <img data-bind="click: incrementLike, attr: {src: model().currentSrc}" id="catImg" src="">
                 </div>
 
-                <small class="text-center"><a id="nope" href="#">not this one</a></small>
-
-                <div class="next-cats-wrapper row">
-                    <div class="next-cat-col col-md-3">
-                        <img class="next-cat img-responsive" src="" data-next-value='1'>
-                    </div>
-                    <div class="next-cat-col col-md-3">
-                        <img class="next-cat img-responsive" src="" data-next-value='2'>
-                    </div>
-                    <div class="next-cat-col col-md-3">
-                        <img class="next-cat img-responsive" src="" data-next-value='3'>
-                    </div>
-                    <div class="next-cat-col col-md-3">
-                        <img class="next-cat img-responsive" src="" data-next-value='4'>
-                    </div>
-                </div>
+                <button data-bind="click: changePic" class="reject-button btn btn-warning">not this one</button>
 
                 <hr>
 
-                <p>You like <span id="counter">0</span> cats!</p>
+                <div data-bind="with: model()">
+                    <p>You like <span data-bind="text: likeCount" id="counter">0</span> cats!</p>
+                    <p>You are <span data-bind="text: rank" id="rank">obviously a cat hater!</span></p>
+                </div>
             </div>
         </section>
     </body>
 
-        <script type="text/javascript" src="libs/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/libs/knockout-min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
 
 </html>

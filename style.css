@@ -20,3 +20,23 @@
     font-size: 20pt;
     text-decoration: underline;
 }
+
+#rank{
+    color: darkslategrey;
+    font-size: 14pt;
+    text-decoration: underline;
+}
+
+.next-cat-col{
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.next-cats-wrapper{
+    margin: 15px;
+}
+
+.reject-button{
+    margin-top:10px;
+    margin-bottom: 5px; 
+}
